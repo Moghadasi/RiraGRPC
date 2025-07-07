@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+		<AssemblyName>Rira.Data</AssemblyName>
+	</PropertyGroup>
+
+	<Import Project="..\Common.target" />
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.2" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Rira.Models\Rira.Models.csproj" />
+	</ItemGroup>
+
+</Project>

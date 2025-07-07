@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+		<AssemblyName>Rira.Models</AssemblyName>
+	</PropertyGroup>
+
+	<Import Project="..\Common.target" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rira.Core\Rira.Core.csproj" />
+  </ItemGroup>
+
+</Project>

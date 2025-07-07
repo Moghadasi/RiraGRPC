@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Rira.Contracts.User.Proto";
+
+package user;
+
+// The User service definition.
+service UserService {
+  // Sends a greeting
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+  rpc AddUser (AddUserRequest) returns (AddUserResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse);
+  rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+// The request message get user
+message GetUserRequest {
+    int32 UserId = 1;
+}
+
+// The response message get user
+message GetUserResponse {
+  int32 UserId = 1;
+  string FirstName = 2;
+  string LastName = 3;
+  string NationalCode = 4;
+  google.protobuf.Timestamp Birthday = 5;
+}
+
+// The request message adding user
+message AddUserRequest {
+  string FirstName = 1;
+  string LastName = 2;
+  string NationalCode = 3;
+  google.protobuf.Timestamp Birthday = 4;
+}
+
+// The response message adding user
+message AddUserResponse {
+  int32 UserId = 1;
+}
+
+// The request message update user
+message UpdateUserRequest {
+  int32 UserId = 1;
+  string FirstName = 2;
+  string LastName = 3;
+  string NationalCode = 4;
+  google.protobuf.Timestamp Birthday = 5;
+}
+
+// The response message update user
+message UpdateUserResponse {
+  bool Done = 1;
+}
+
+// The request message delete user
+message DeleteUserRequest {
+  int32 UserId = 1;
+}
+
+// The response message delete user
+message DeleteUserResponse {
+  bool Done = 1;
+}

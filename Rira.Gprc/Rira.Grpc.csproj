@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup Label="Globals">
+		<AssemblyName>Rira.Grpc</AssemblyName>
+	</PropertyGroup>
+
+	<Import Project="..\Common.target" />
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.57.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rira.Contracts\Rira.Contracts.csproj" />
+    <ProjectReference Include="..\Rira.Core\Rira.Core.csproj" />
+    <ProjectReference Include="..\Rira.Data\Rira.Data.csproj" />
+    <ProjectReference Include="..\Rira.Services\Rira.Services.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\user.proto" GrpcServices="Server" />
+	</ItemGroup>
+
+</Project>

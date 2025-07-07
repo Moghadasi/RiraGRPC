@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+		<AssemblyName>Rira.Contracts</AssemblyName>
+	</PropertyGroup>
+
+	<Import Project="..\Common.target" />
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.Tools" Version="2.72.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Rira.Core\Rira.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="User\Protos\user.proto" GrpcServices="Server" />
+	</ItemGroup>
+
+
+</Project>

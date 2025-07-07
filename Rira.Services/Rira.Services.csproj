@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup Label="Globals">
+		<AssemblyName>Rira.Services</AssemblyName>
+	</PropertyGroup>
+
+	<Import Project="..\Common.target" />
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Rira.Contracts\Rira.Contracts.csproj" />
+	  <ProjectReference Include="..\Rira.Data\Rira.Data.csproj" />
+	</ItemGroup>
+
+
+</Project>
