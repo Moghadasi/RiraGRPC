@@ -48,7 +48,7 @@ namespace Rira.Grpc
                 await next.Invoke();
             });
 
-           // app.MapGrpcService<Services.UserService>();
+            app.MapGrpcService<Services.UserService>();
             app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
            
             return app;

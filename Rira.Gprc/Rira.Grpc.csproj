@@ -19,8 +19,4 @@
     <ProjectReference Include="..\Rira.Services\Rira.Services.csproj" />
   </ItemGroup>
 
-	<ItemGroup>
-		<Protobuf Include="Protos\user.proto" GrpcServices="Server" />
-	</ItemGroup>
-
 </Project>

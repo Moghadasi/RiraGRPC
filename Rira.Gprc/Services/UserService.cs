@@ -3,12 +3,12 @@ using Grpc.Core;
 using MediatR;
 using Rira.Contracts.User.Command;
 using Rira.Contracts.User.Query;
-using Rira.Gprc;
+using Rira.Contracts.User.Proto;
 
 namespace Rira.Grpc.Services;
 
 /// <inheritdoc />
-public class UserService : Gprc.UserService.UserServiceBase
+public class UserService : Rira.Contracts.User.Proto.UserService.UserServiceBase
 {
     #region Private Feilds
 
